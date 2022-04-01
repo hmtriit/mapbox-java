@@ -14,6 +14,7 @@ import com.mapbox.api.directions.v5.DirectionsAdapterFactory;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Includes one {@link StepManeuver} object and travel to the following {@link LegStep}.
@@ -504,5 +505,7 @@ public abstract class LegStep extends DirectionsJsonObject {
      * @since 3.0.0
      */
     public abstract LegStep build();
+
+    abstract Builder unrecognised(Map<String, Object> value);
   }
 }

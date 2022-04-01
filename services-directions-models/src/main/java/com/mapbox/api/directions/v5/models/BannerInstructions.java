@@ -9,6 +9,8 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.TypeAdapter;
 import com.mapbox.api.directions.v5.DirectionsAdapterFactory;
 
+import java.util.Map;
+
 /**
  * Visual instruction information related to a particular {@link LegStep} useful for making UI
  * elements inside your application such as banners. To receive this information, your request must
@@ -186,5 +188,8 @@ public abstract class BannerInstructions extends DirectionsJsonObject {
      * @since 3.0.0
      */
     public abstract BannerInstructions build();
+
+    @Nullable
+    abstract Builder unrecognised(Map<String, Object> value);
   }
 }

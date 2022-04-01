@@ -21,6 +21,7 @@ import java.net.URISyntaxException;
 import java.net.URL;
 import java.net.URLDecoder;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Defines route request parameters.
@@ -1913,5 +1914,7 @@ public abstract class RouteOptions extends DirectionsJsonObject {
      */
     @NonNull
     public abstract RouteOptions build();
+
+    abstract Builder unrecognised(Map<String, Object> value);
   }
 }

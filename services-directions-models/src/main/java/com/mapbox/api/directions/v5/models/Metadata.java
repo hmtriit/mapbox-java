@@ -88,5 +88,7 @@ public abstract class Metadata extends DirectionsJsonObject {
      * @return a new {@link Metadata} using the provided values in this builder
      */
     public abstract Metadata build();
+
+    abstract Builder unrecognised(Map<String, Object> value);
   }
 }

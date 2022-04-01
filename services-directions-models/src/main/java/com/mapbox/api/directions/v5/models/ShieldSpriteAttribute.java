@@ -11,12 +11,13 @@ import com.mapbox.api.directions.v5.DirectionsAdapterFactory;
 
 import java.io.Serializable;
 import java.util.List;
+import java.util.Map;
 
 /**
  * ShieldSpriteAttribute.
  */
 @AutoValue
-public abstract class ShieldSpriteAttribute implements Serializable {
+public abstract class ShieldSpriteAttribute extends DirectionsJsonObject implements Serializable {
 
   /**
    * Create a new instance of this class by using the {@link ShieldSpriteAttribute.Builder} class.
@@ -185,5 +186,7 @@ public abstract class ShieldSpriteAttribute implements Serializable {
      */
     @NonNull
     public abstract ShieldSpriteAttribute build();
+
+    abstract Builder unrecognised(Map<String, Object> value);
   }
 }

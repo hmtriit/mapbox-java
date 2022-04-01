@@ -7,6 +7,8 @@ import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.mapbox.api.directions.v5.DirectionsAdapterFactory;
 
+import java.util.Map;
+
 /**
  * A part of the {@link BannerComponents} which includes a snippet of the route shield associated
  * with the instruction. In cases where data is available, a base url will be provided to help in
@@ -139,5 +141,7 @@ public abstract class MapboxShield extends DirectionsJsonObject {
      * @since 3.0.0
      */
     public abstract MapboxShield build();
+
+    abstract Builder unrecognised(Map<String, Object> value);
   }
 }

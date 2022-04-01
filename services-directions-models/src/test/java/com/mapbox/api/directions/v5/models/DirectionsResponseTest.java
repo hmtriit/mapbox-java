@@ -25,6 +25,7 @@ import static org.junit.Assert.assertNotNull;
 public class DirectionsResponseTest extends TestUtils {
 
   private static final String DIRECTIONS_V5_PRECISION6_FIXTURE = "directions_v5_precision_6.json";
+  private static final String DIRECTIONS_V5_PRECISION6_FIXTURE_ARTIFICIAL_FIELDS = "directions_v5_precision_6_with_artificial_fields.json";
   private static final String DIRECTIONS_V5_MULTIPLE_ROUTES = "directions_v5_multiple_routes.json";
   private static final String DIRECTIONS_V5_MULTIPLE_ROUTES_WITH_OPTIONS =
     "directions_v5_multiple_routes_with_options.json";
@@ -50,11 +51,11 @@ public class DirectionsResponseTest extends TestUtils {
   @Test
   public void testToFromJsonWithRealResponse() throws Exception {
     Gson gson = new GsonBuilder().create();
-    String originalJson = loadJsonFixture(DIRECTIONS_V5_PRECISION6_FIXTURE);
+    String originalJson = loadJsonFixture(DIRECTIONS_V5_PRECISION6_FIXTURE_ARTIFICIAL_FIELDS);
     JsonObject originalJsonObject = gson.fromJson(originalJson, JsonObject.class);
 
-    DirectionsResponse responseFromJson1 = DirectionsResponse.fromJson(originalJson);
-    JsonObject jsonFromObject = gson.fromJson(responseFromJson1.toJson(), JsonObject.class);
+    DirectionsResponse model = DirectionsResponse.fromJson(originalJson);
+    JsonObject jsonFromObject = gson.fromJson(model.toJson(), JsonObject.class);
 
     assertEquals(originalJsonObject, jsonFromObject);
   }
@@ -62,7 +63,7 @@ public class DirectionsResponseTest extends TestUtils {
   @Test
   public void testToFromJsonWithMutatedResponse() throws Exception {
     Gson gson = new GsonBuilder().create();
-    JsonObject mutatedJson = gson.fromJson(loadJsonFixture(DIRECTIONS_V5_PRECISION6_FIXTURE), JsonObject.class);
+    JsonObject mutatedJson = gson.fromJson(loadJsonFixture(DIRECTIONS_V5_PRECISION6_FIXTURE_ARTIFICIAL_FIELDS), JsonObject.class);
     mutateJson(mutatedJson);
 
     DirectionsResponse responseFromJson1 = DirectionsResponse.fromJson(mutatedJson.toString());

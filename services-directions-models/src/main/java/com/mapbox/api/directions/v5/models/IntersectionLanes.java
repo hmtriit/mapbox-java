@@ -10,6 +10,7 @@ import com.google.gson.annotations.SerializedName;
 import com.mapbox.api.directions.v5.DirectionsAdapterFactory;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * Object representing lanes in an intersection.
@@ -174,5 +175,7 @@ public abstract class IntersectionLanes extends DirectionsJsonObject {
      * @since 3.0.0
      */
     public abstract IntersectionLanes build();
+
+    abstract Builder unrecognised(Map<String, Object> value);
   }
 }

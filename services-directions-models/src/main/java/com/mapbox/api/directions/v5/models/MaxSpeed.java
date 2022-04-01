@@ -8,6 +8,8 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.TypeAdapter;
 import com.mapbox.api.directions.v5.DirectionsAdapterFactory;
 
+import java.util.Map;
+
 /**
  * Object representing max speeds along a route.
  *
@@ -151,5 +153,7 @@ public abstract class MaxSpeed extends DirectionsJsonObject {
      * @since 3.0.0
      */
     public abstract MaxSpeed build();
+
+    abstract Builder unrecognised(Map<String, Object> value);
   }
 }

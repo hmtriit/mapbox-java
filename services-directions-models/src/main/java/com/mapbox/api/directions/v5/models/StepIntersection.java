@@ -12,6 +12,7 @@ import com.mapbox.api.directions.v5.DirectionsCriteria;
 import com.mapbox.geojson.Point;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * Object representing an intersection along the step.
@@ -420,5 +421,7 @@ public abstract class StepIntersection extends DirectionsJsonObject {
      * @since 3.0.0
      */
     public abstract StepIntersection build();
+
+    abstract Builder unrecognised(Map<String, Object> value);
   }
 }

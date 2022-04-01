@@ -15,6 +15,7 @@ import com.mapbox.geojson.Point;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
+import java.util.Map;
 
 /**
  * Gives maneuver information about one {@link LegStep}.
@@ -417,5 +418,7 @@ public abstract class StepManeuver extends DirectionsJsonObject {
      * @since 3.0.0
      */
     public abstract StepManeuver build();
+
+    abstract Builder unrecognised(Map<String, Object> value);
   }
 }

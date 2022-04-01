@@ -9,6 +9,8 @@ import com.google.gson.annotations.SerializedName;
 import com.mapbox.api.directions.v5.DirectionsAdapterFactory;
 import com.mapbox.api.directions.v5.DirectionsCriteria;
 
+import java.util.Map;
+
 /**
  * An object containing detailed information about the road exiting the intersection along the
  * route.
@@ -92,5 +94,7 @@ public abstract class MapboxStreetsV8 extends DirectionsJsonObject {
      * @return a new {@link MapboxStreetsV8} using the provided values in this builder
      */
     public abstract MapboxStreetsV8 build();
+
+    abstract Builder unrecognised(Map<String, Object> value);
   }
 }

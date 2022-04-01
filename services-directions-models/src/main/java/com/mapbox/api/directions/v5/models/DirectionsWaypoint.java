@@ -10,6 +10,8 @@ import com.google.gson.annotations.SerializedName;
 import com.mapbox.api.directions.v5.DirectionsAdapterFactory;
 import com.mapbox.geojson.Point;
 
+import java.util.Map;
+
 /**
  * An input coordinate snapped to the roads network.
  *
@@ -144,5 +146,6 @@ public abstract class DirectionsWaypoint extends DirectionsJsonObject {
      */
     public abstract DirectionsWaypoint build();
 
+    abstract Builder unrecognised(Map<String, Object> value);
   }
 }

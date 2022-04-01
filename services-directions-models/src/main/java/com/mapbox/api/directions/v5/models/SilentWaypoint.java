@@ -6,6 +6,8 @@ import com.google.gson.Gson;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.SerializedName;
 
+import java.util.Map;
+
 /**
  * Represents an information about silent waypoint in the leg index.
  * See {@link RouteLeg#viaWaypoints()} for more details.
@@ -93,5 +95,7 @@ public abstract class SilentWaypoint extends DirectionsJsonObject {
      */
     @NonNull
     public abstract SilentWaypoint build();
+
+    abstract Builder unrecognised(Map<String, Object> value);
   }
 }

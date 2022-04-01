@@ -9,12 +9,13 @@ import com.google.gson.TypeAdapter;
 import com.mapbox.api.directions.v5.DirectionsAdapterFactory;
 
 import java.io.Serializable;
+import java.util.Map;
 
 /**
  * ShieldSvg.
  */
 @AutoValue
-public abstract class ShieldSvg implements Serializable {
+public abstract class ShieldSvg extends DirectionsJsonObject implements Serializable {
 
   /**
    * Create a new instance of this class by using the {@link ShieldSvg.Builder} class.
@@ -99,5 +100,7 @@ public abstract class ShieldSvg implements Serializable {
      */
     @NonNull
     public abstract ShieldSvg build();
+
+    abstract Builder unrecognised(Map<String, Object> value);
   }
 }

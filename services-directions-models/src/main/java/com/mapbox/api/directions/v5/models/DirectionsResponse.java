@@ -11,6 +11,7 @@ import com.mapbox.geojson.Point;
 import com.mapbox.geojson.PointAsCoordinatesTypeAdapter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 /**
  * This is the root Mapbox Directions API response. Inside this class are several nested classes
@@ -331,5 +332,7 @@ public abstract class DirectionsResponse extends DirectionsJsonObject {
 
       return autoBuild();
     }
+
+    abstract Builder unrecognised(Map<String, Object> value);
   }
 }

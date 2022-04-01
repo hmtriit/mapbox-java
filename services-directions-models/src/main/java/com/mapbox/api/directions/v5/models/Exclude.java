@@ -10,6 +10,7 @@ import com.mapbox.geojson.Point;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
 
@@ -23,7 +24,7 @@ import java.util.Set;
  * consider using raw {@link RouteOptions#exclude()} directly.
  */
 @AutoValue
-public abstract class Exclude {
+public abstract class Exclude extends DirectionsJsonObject {
 
   /**
    * Build a new instance of {@link Exclude}. Nothing is excluded by default.
@@ -103,6 +104,8 @@ public abstract class Exclude {
      * @return a new instance of {@link Exclude}
      */
     public abstract Exclude build();
+
+    abstract Builder unrecognised(Map<String, Object> value);
   }
 
   @Nullable

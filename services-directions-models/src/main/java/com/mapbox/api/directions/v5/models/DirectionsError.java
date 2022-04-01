@@ -6,6 +6,7 @@ import com.google.gson.Gson;
 import com.google.gson.TypeAdapter;
 
 import java.io.Serializable;
+import java.util.Map;
 
 /**
  * If an InvalidInput error is thrown, this class can be used to get both the code and the message
@@ -14,7 +15,7 @@ import java.io.Serializable;
  * @since 3.0.0
  */
 @AutoValue
-public abstract class DirectionsError implements Serializable {
+public abstract class DirectionsError extends DirectionsJsonObject implements Serializable {
 
   /**
    * Create a new instance of this class by using the {@link Builder} class.
@@ -120,5 +121,7 @@ public abstract class DirectionsError implements Serializable {
      * @since 3.0.0
      */
     public abstract DirectionsError build();
+
+    abstract Builder unrecognised(Map<String, Object> value);
   }
 }

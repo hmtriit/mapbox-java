@@ -145,10 +145,6 @@ public abstract class DirectionsRoute extends DirectionsJsonObject {
   @Nullable
   public abstract String requestUuid();
 
-  @Nullable
-  @UnrecognisedJsonProperties
-  abstract Map<String, Object> unrecognised();
-
   /**
    * Convert the current {@link DirectionsRoute} to its builder holding the currently assigned
    * values. This allows you to modify a single property and then rebuild the object resulting in
@@ -338,9 +334,6 @@ public abstract class DirectionsRoute extends DirectionsJsonObject {
     @NonNull
     public abstract Builder routeIndex(String routeIndex);
 
-    @Nullable
-    abstract Builder unrecognised(Map<String, Object> value);
-
     /**
      * Build a new {@link DirectionsRoute} object.
      *
@@ -349,5 +342,7 @@ public abstract class DirectionsRoute extends DirectionsJsonObject {
      */
     @NonNull
     public abstract DirectionsRoute build();
+
+    abstract Builder unrecognised(Map<String, Object> value);
   }
 }

@@ -8,6 +8,8 @@ import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.mapbox.api.directions.v5.DirectionsAdapterFactory;
 
+import java.util.Map;
+
 /**
  * An objects describing the administrative boundaries the route leg travels through.
  */
@@ -92,6 +94,9 @@ public abstract class Admin extends DirectionsJsonObject {
      * @param countryCodeAlpha3 3 character ISO 3166-1 alpha-3 code
      */
     public abstract Builder countryCodeAlpha3(@Nullable String countryCodeAlpha3);
+
+    @Nullable
+    abstract Builder unrecognised(Map<String, Object> value);
 
     /**
      * Build a new {@link Admin} object.

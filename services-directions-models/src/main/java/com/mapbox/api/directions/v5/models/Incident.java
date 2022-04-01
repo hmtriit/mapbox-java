@@ -12,6 +12,7 @@ import com.mapbox.api.directions.v5.DirectionsAdapterFactory;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Reproduces one of road incidents type ({@link IncidentType}) that might be on the way.
@@ -472,5 +473,7 @@ public abstract class Incident extends DirectionsJsonObject {
      * @return a new instance of {@link Incident}.
      */
     public abstract Incident build();
+
+    abstract Builder unrecognised(Map<String, Object> value);
   }
 }

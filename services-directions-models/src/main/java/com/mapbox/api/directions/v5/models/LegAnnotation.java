@@ -9,6 +9,7 @@ import com.google.gson.annotations.SerializedName;
 import com.mapbox.api.directions.v5.DirectionsAdapterFactory;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * An annotations object that contains additional details about each line segment along the route
@@ -203,5 +204,7 @@ public abstract class LegAnnotation extends DirectionsJsonObject {
      * @since 3.0.0
      */
     public abstract LegAnnotation build();
+
+    abstract Builder unrecognised(Map<String, Object> value);
   }
 }

@@ -7,12 +7,13 @@ import com.google.gson.Gson;
 import com.google.gson.TypeAdapter;
 
 import java.io.Serializable;
+import java.util.Map;
 
 /**
  * ShieldSprite.
  */
 @AutoValue
-public abstract class ShieldSprite implements Serializable {
+public abstract class ShieldSprite extends DirectionsJsonObject implements Serializable {
 
   /**
    * Create a new instance of this class by using the {@link ShieldSprite.Builder} class.
@@ -84,5 +85,7 @@ public abstract class ShieldSprite implements Serializable {
      */
     @NonNull
     public abstract ShieldSprite build();
+
+    abstract Builder unrecognised(Map<String, Object> value);
   }
 }
