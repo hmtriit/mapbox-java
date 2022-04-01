@@ -1,17 +1,24 @@
 package com.mapbox.api.directions.v5.models;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonPrimitive;
 import com.mapbox.api.directions.v5.DirectionsCriteria;
 import com.mapbox.core.TestUtils;
 import com.mapbox.geojson.Point;
 
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.List;
-import org.junit.Assert;
+
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.Map;
 
+import static com.mapbox.api.directions.v5.utils.MutateJsonUtil.mutateJson;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
@@ -41,15 +48,27 @@ public class DirectionsResponseTest extends TestUtils {
   }
 
   @Test
-  public void testToFromJson() throws Exception {
-    String json = loadJsonFixture(DIRECTIONS_V5_PRECISION6_FIXTURE);
-    DirectionsResponse responseFromJson1 = DirectionsResponse.fromJson(json);
+  public void testToFromJsonWithRealResponse() throws Exception {
+    Gson gson = new GsonBuilder().create();
+    String originalJson = loadJsonFixture(DIRECTIONS_V5_PRECISION6_FIXTURE);
+    JsonObject originalJsonObject = gson.fromJson(originalJson, JsonObject.class);
 
-    String jsonString = responseFromJson1.toJson();
-    DirectionsResponse responseFromJson2 = DirectionsResponse.fromJson(jsonString);
+    DirectionsResponse responseFromJson1 = DirectionsResponse.fromJson(originalJson);
+    JsonObject jsonFromObject = gson.fromJson(responseFromJson1.toJson(), JsonObject.class);
 
-    Assert.assertEquals(responseFromJson1, responseFromJson2);
-    Assert.assertEquals(responseFromJson2, responseFromJson1);
+    assertEquals(originalJsonObject, jsonFromObject);
+  }
+
+  @Test
+  public void testToFromJsonWithMutatedResponse() throws Exception {
+    Gson gson = new GsonBuilder().create();
+    JsonObject mutatedJson = gson.fromJson(loadJsonFixture(DIRECTIONS_V5_PRECISION6_FIXTURE), JsonObject.class);
+    mutateJson(mutatedJson);
+
+    DirectionsResponse responseFromJson1 = DirectionsResponse.fromJson(mutatedJson.toString());
+    JsonObject jsonFromObject = gson.fromJson(responseFromJson1.toJson(), JsonObject.class);
+
+    assertEquals(mutatedJson, jsonFromObject);
   }
 
   @Test

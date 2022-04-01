@@ -11,6 +11,8 @@ import com.google.gson.annotations.SerializedName;
 import com.mapbox.api.directions.v5.DirectionsAdapterFactory;
 import com.mapbox.geojson.Point;
 import com.mapbox.geojson.PointAsCoordinatesTypeAdapter;
+import com.ryanharter.auto.value.gson.UnrecognisedJsonProperties;
+
 import java.util.List;
 import java.util.Map;
 
@@ -144,6 +146,7 @@ public abstract class DirectionsRoute extends DirectionsJsonObject {
   public abstract String requestUuid();
 
   @Nullable
+  @UnrecognisedJsonProperties
   abstract Map<String, Object> unrecognised();
 
   /**
