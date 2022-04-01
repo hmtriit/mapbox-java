@@ -12,6 +12,7 @@ import com.mapbox.api.directions.v5.DirectionsAdapterFactory;
 import com.mapbox.geojson.Point;
 import com.mapbox.geojson.PointAsCoordinatesTypeAdapter;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Detailed information about an individual route such as the duration, distance and geometry.
@@ -141,6 +142,9 @@ public abstract class DirectionsRoute extends DirectionsJsonObject {
    */
   @Nullable
   public abstract String requestUuid();
+
+  @Nullable
+  abstract Map<String, Object> unrecognised();
 
   /**
    * Convert the current {@link DirectionsRoute} to its builder holding the currently assigned
@@ -330,6 +334,9 @@ public abstract class DirectionsRoute extends DirectionsJsonObject {
      */
     @NonNull
     public abstract Builder routeIndex(String routeIndex);
+
+    @Nullable
+    abstract Builder unrecognised(Map<String, Object> value);
 
     /**
      * Build a new {@link DirectionsRoute} object.
