@@ -472,6 +472,5 @@ public abstract class Incident extends DirectionsJsonObject {
      * @return a new instance of {@link Incident}.
      */
     public abstract Incident build();
-
   }
 }

@@ -174,6 +174,5 @@ public abstract class IntersectionLanes extends DirectionsJsonObject {
      * @since 3.0.0
      */
     public abstract IntersectionLanes build();
-
   }
 }

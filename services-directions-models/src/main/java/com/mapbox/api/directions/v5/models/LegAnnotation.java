@@ -203,6 +203,5 @@ public abstract class LegAnnotation extends DirectionsJsonObject {
      * @since 3.0.0
      */
     public abstract LegAnnotation build();
-
   }
 }

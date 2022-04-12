@@ -124,6 +124,5 @@ public abstract class ShieldSprites extends DirectionsJsonObject implements Seri
      */
     @NonNull
     public abstract ShieldSprites build();
-
   }
 }

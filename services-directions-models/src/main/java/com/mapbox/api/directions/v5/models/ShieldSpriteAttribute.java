@@ -185,6 +185,5 @@ public abstract class ShieldSpriteAttribute extends DirectionsJsonObject impleme
      */
     @NonNull
     public abstract ShieldSpriteAttribute build();
-
   }
 }

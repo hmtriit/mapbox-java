@@ -164,6 +164,5 @@ public abstract class BannerView extends DirectionsJsonObject {
      * @since 5.0.0
      */
     public abstract BannerView build();
-
   }
 }

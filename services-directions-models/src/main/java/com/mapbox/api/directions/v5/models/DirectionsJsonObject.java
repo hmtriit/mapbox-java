@@ -1,5 +1,6 @@
 package com.mapbox.api.directions.v5.models;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import com.google.gson.GsonBuilder;
 import com.mapbox.api.directions.v5.DirectionsAdapterFactory;
@@ -36,6 +37,7 @@ public abstract class DirectionsJsonObject implements Serializable {
   abstract Map<String, Object> unrecognised();
 
   static abstract class Builder<T extends Builder> {
+    @NonNull
     abstract T unrecognised(Map<String, Object> value);
   }
 }

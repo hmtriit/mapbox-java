@@ -504,6 +504,5 @@ public abstract class LegStep extends DirectionsJsonObject {
      * @since 3.0.0
      */
     public abstract LegStep build();
-
   }
 }

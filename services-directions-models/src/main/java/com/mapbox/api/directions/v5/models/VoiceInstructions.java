@@ -7,7 +7,6 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.TypeAdapter;
 import com.mapbox.api.directions.v5.DirectionsAdapterFactory;
 
-
 /**
  * This class provides information thats useful for properly making navigation announcements at the
  * correct time. Essentially, a distance and a string are given, using Turf Distance measurement
@@ -146,6 +145,5 @@ public abstract class VoiceInstructions extends DirectionsJsonObject {
      * @since 3.0.0
      */
     public abstract VoiceInstructions build();
-
   }
 }

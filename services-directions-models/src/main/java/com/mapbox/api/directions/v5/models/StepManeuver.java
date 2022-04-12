@@ -417,6 +417,5 @@ public abstract class StepManeuver extends DirectionsJsonObject {
      * @since 3.0.0
      */
     public abstract StepManeuver build();
-
   }
 }

@@ -280,6 +280,5 @@ public abstract class RouteLeg extends DirectionsJsonObject {
      */
     @NonNull
     public abstract RouteLeg build();
-
   }
 }

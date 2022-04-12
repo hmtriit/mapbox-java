@@ -103,7 +103,6 @@ public abstract class Exclude extends DirectionsJsonObject {
      * @return a new instance of {@link Exclude}
      */
     public abstract Exclude build();
-
   }
 
   @Nullable

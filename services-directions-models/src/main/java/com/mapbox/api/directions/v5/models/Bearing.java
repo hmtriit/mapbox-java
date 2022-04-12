@@ -3,7 +3,6 @@ package com.mapbox.api.directions.v5.models;
 import androidx.annotation.NonNull;
 import com.google.auto.value.AutoValue;
 
-
 /**
  * A value pair of an {@link #angle} which is a clockwise value from true north between 0 and 360,
  * and a {@link #degrees()} which is the range of degrees by which the angle can deviate.
@@ -82,6 +81,5 @@ public abstract class Bearing extends DirectionsJsonObject {
      */
     @NonNull
     public abstract Bearing build();
-
   }
 }

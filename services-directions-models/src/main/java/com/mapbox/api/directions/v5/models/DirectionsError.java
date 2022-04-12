@@ -120,6 +120,5 @@ public abstract class DirectionsError extends DirectionsJsonObject implements Se
      * @since 3.0.0
      */
     public abstract DirectionsError build();
-
   }
 }

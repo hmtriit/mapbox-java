@@ -6,7 +6,6 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.TypeAdapter;
 import com.mapbox.api.directions.v5.DirectionsAdapterFactory;
 
-
 /**
  * Quantitative descriptor of congestion.
  */
@@ -76,6 +75,5 @@ public abstract class Congestion extends DirectionsJsonObject {
      * @return a new instance of {@link Congestion}.
      */
     public abstract Congestion build();
-
   }
 }

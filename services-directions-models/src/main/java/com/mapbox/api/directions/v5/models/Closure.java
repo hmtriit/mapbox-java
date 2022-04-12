@@ -9,7 +9,6 @@ import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.mapbox.api.directions.v5.DirectionsAdapterFactory;
 
-
 /**
  * An object indicating the geometry indexes defining a road closure.
  */
@@ -97,6 +96,5 @@ public abstract class Closure extends DirectionsJsonObject {
      * @return a new {@link Closure} using the provided values in this builder
      */
     public abstract Closure build();
-
   }
 }

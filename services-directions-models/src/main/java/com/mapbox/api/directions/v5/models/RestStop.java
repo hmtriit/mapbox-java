@@ -9,7 +9,6 @@ import com.google.gson.TypeAdapter;
 import com.mapbox.api.directions.v5.DirectionsAdapterFactory;
 import com.mapbox.api.directions.v5.DirectionsCriteria;
 
-
 /**
  * An object containing information about passing rest stops along the route.
  * Only available on the {@link DirectionsCriteria#PROFILE_DRIVING} profile.
@@ -87,6 +86,5 @@ public abstract class RestStop extends DirectionsJsonObject {
      * @return a new {@link RestStop} using the provided values in this builder
      */
     public abstract RestStop build();
-
   }
 }

@@ -8,7 +8,6 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.TypeAdapter;
 import com.mapbox.api.directions.v5.DirectionsAdapterFactory;
 
-
 /**
  * Object representing max speeds along a route.
  *

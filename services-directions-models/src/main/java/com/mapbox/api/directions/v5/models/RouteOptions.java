@@ -1913,6 +1913,5 @@ public abstract class RouteOptions extends DirectionsJsonObject {
      */
     @NonNull
     public abstract RouteOptions build();
-
   }
 }

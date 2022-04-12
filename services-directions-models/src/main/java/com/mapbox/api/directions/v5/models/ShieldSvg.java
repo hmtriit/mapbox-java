@@ -99,6 +99,5 @@ public abstract class ShieldSvg extends DirectionsJsonObject implements Serializ
      */
     @NonNull
     public abstract ShieldSvg build();
-
   }
 }

@@ -84,6 +84,5 @@ public abstract class ShieldSprite extends DirectionsJsonObject implements Seria
      */
     @NonNull
     public abstract ShieldSprite build();
-
   }
 }

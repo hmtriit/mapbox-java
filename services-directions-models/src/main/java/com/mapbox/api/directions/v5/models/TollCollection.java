@@ -89,6 +89,5 @@ public abstract class TollCollection extends DirectionsJsonObject {
      * @return a new {@link TollCollection} using the provided values in this builder
      */
     public abstract TollCollection build();
-
   }
 }
