@@ -10,7 +10,6 @@ import com.google.gson.TypeAdapter;
 import com.mapbox.api.directions.v5.DirectionsAdapterFactory;
 
 import java.util.List;
-import java.util.Map;
 
 /**
  * Includes both plain text information that can be visualized inside your navigation application

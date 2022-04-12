@@ -21,7 +21,6 @@ import java.net.URISyntaxException;
 import java.net.URL;
 import java.net.URLDecoder;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Defines route request parameters.

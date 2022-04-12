@@ -15,7 +15,6 @@ import com.mapbox.geojson.Point;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
-import java.util.Map;
 
 /**
  * Gives maneuver information about one {@link LegStep}.

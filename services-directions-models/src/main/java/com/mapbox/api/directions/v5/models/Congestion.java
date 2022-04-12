@@ -6,7 +6,6 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.TypeAdapter;
 import com.mapbox.api.directions.v5.DirectionsAdapterFactory;
 
-import java.util.Map;
 
 /**
  * Quantitative descriptor of congestion.

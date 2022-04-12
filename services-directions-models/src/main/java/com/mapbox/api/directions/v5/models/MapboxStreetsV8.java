@@ -9,7 +9,6 @@ import com.google.gson.annotations.SerializedName;
 import com.mapbox.api.directions.v5.DirectionsAdapterFactory;
 import com.mapbox.api.directions.v5.DirectionsCriteria;
 
-import java.util.Map;
 
 /**
  * An object containing detailed information about the road exiting the intersection along the

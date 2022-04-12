@@ -14,7 +14,6 @@ import com.mapbox.api.directions.v5.DirectionsAdapterFactory;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Includes one {@link StepManeuver} object and travel to the following {@link LegStep}.

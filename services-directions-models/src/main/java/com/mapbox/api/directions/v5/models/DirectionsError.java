@@ -6,7 +6,6 @@ import com.google.gson.Gson;
 import com.google.gson.TypeAdapter;
 
 import java.io.Serializable;
-import java.util.Map;
 
 /**
  * If an InvalidInput error is thrown, this class can be used to get both the code and the message

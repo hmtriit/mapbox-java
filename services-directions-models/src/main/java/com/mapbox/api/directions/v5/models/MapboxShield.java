@@ -7,7 +7,6 @@ import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.mapbox.api.directions.v5.DirectionsAdapterFactory;
 
-import java.util.Map;
 
 /**
  * A part of the {@link BannerComponents} which includes a snippet of the route shield associated

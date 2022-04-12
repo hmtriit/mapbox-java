@@ -9,7 +9,6 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.TypeAdapter;
 import com.mapbox.api.directions.v5.DirectionsAdapterFactory;
 
-import java.util.Map;
 
 /**
  * Visual instruction information related to a particular {@link LegStep} useful for making UI

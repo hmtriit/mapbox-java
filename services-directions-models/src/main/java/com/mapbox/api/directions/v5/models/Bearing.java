@@ -3,7 +3,6 @@ package com.mapbox.api.directions.v5.models;
 import androidx.annotation.NonNull;
 import com.google.auto.value.AutoValue;
 
-import java.util.Map;
 
 /**
  * A value pair of an {@link #angle} which is a clockwise value from true north between 0 and 360,

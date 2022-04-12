@@ -7,7 +7,6 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.TypeAdapter;
 import com.mapbox.api.directions.v5.DirectionsAdapterFactory;
 
-import java.util.Map;
 
 /**
  * This class provides information thats useful for properly making navigation announcements at the

@@ -11,7 +11,6 @@ import com.mapbox.api.directions.v5.DirectionsAdapterFactory;
 
 import java.io.Serializable;
 import java.util.List;
-import java.util.Map;
 
 /**
  * ShieldSpriteAttribute.

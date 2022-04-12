@@ -14,7 +14,6 @@ import com.mapbox.geojson.PointAsCoordinatesTypeAdapter;
 import com.ryanharter.auto.value.gson.UnrecognisedJsonProperties;
 
 import java.util.List;
-import java.util.Map;
 
 /**
  * Detailed information about an individual route such as the duration, distance and geometry.

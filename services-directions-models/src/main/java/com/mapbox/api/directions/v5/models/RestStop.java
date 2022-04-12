@@ -9,7 +9,6 @@ import com.google.gson.TypeAdapter;
 import com.mapbox.api.directions.v5.DirectionsAdapterFactory;
 import com.mapbox.api.directions.v5.DirectionsCriteria;
 
-import java.util.Map;
 
 /**
  * An object containing information about passing rest stops along the route.

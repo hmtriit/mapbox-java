@@ -7,7 +7,6 @@ import com.google.gson.Gson;
 import com.google.gson.TypeAdapter;
 
 import java.io.Serializable;
-import java.util.Map;
 
 /**
  * ShieldSprite.

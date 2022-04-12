@@ -14,7 +14,6 @@ import com.mapbox.api.directions.v5.DirectionsAdapterFactory;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.util.List;
-import java.util.Map;
 
 /**
  * A part of the {@link BannerText} which includes a snippet of the full banner text instruction. In

@@ -12,7 +12,6 @@ import com.mapbox.api.directions.v5.DirectionsCriteria;
 import com.mapbox.geojson.Point;
 
 import java.util.List;
-import java.util.Map;
 
 /**
  * Object representing an intersection along the step.

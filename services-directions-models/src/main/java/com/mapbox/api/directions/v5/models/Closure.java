@@ -9,7 +9,6 @@ import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.mapbox.api.directions.v5.DirectionsAdapterFactory;
 
-import java.util.Map;
 
 /**
  * An object indicating the geometry indexes defining a road closure.

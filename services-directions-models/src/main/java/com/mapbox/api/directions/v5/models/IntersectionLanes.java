@@ -10,7 +10,6 @@ import com.google.gson.annotations.SerializedName;
 import com.mapbox.api.directions.v5.DirectionsAdapterFactory;
 
 import java.util.List;
-import java.util.Map;
 
 /**
  * Object representing lanes in an intersection.

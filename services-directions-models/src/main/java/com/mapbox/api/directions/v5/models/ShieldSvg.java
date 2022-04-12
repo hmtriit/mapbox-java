@@ -9,7 +9,6 @@ import com.google.gson.TypeAdapter;
 import com.mapbox.api.directions.v5.DirectionsAdapterFactory;
 
 import java.io.Serializable;
-import java.util.Map;
 
 /**
  * ShieldSvg.
