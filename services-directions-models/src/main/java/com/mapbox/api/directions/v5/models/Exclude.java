@@ -67,7 +67,7 @@ public abstract class Exclude extends DirectionsJsonObject {
    * Use this builder to build an {@link Exclude} object.
    */
   @AutoValue.Builder
-  public abstract static class Builder {
+  public abstract static class Builder extends DirectionsJsonObject.Builder<Builder> {
 
     /**
      * Exclude certain road types from routing. The default is to not exclude anything from the
@@ -105,7 +105,6 @@ public abstract class Exclude extends DirectionsJsonObject {
      */
     public abstract Exclude build();
 
-    abstract Builder unrecognised(Map<String, Object> value);
   }
 
   @Nullable

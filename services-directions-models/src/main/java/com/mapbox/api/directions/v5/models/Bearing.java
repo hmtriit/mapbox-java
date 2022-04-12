@@ -56,7 +56,7 @@ public abstract class Bearing extends DirectionsJsonObject {
    * This builder can be used to set the values describing the {@link Bearing}.
    */
   @AutoValue.Builder
-  public abstract static class Builder {
+  public abstract static class Builder extends DirectionsJsonObject.Builder<Builder> {
 
     /**
      * Clockwise value from true north between 0 and 360.
@@ -84,6 +84,5 @@ public abstract class Bearing extends DirectionsJsonObject {
     @NonNull
     public abstract Bearing build();
 
-    abstract Builder unrecognised(Map<String, Object> value);
   }
 }

@@ -83,7 +83,7 @@ public abstract class DirectionsError extends DirectionsJsonObject implements Se
    * @since 3.0.0
    */
   @AutoValue.Builder
-  public abstract static class Builder {
+  public abstract static class Builder extends DirectionsJsonObject.Builder<Builder> {
 
     /**
      * String indicating the state of the response. This is a separate code than the HTTP status
@@ -122,6 +122,5 @@ public abstract class DirectionsError extends DirectionsJsonObject implements Se
      */
     public abstract DirectionsError build();
 
-    abstract Builder unrecognised(Map<String, Object> value);
   }
 }

@@ -60,7 +60,7 @@ public abstract class ShieldSprite extends DirectionsJsonObject implements Seria
    * This builder can be used to set the values describing the {@link ShieldSprite}.
    */
   @AutoValue.Builder
-  public abstract static class Builder {
+  public abstract static class Builder extends DirectionsJsonObject.Builder<Builder> {
 
     /**
      * Shield sprite's name.
@@ -86,6 +86,5 @@ public abstract class ShieldSprite extends DirectionsJsonObject implements Seria
     @NonNull
     public abstract ShieldSprite build();
 
-    abstract Builder unrecognised(Map<String, Object> value);
   }
 }

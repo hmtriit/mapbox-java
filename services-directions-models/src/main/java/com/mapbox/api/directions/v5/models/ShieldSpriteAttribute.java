@@ -121,7 +121,7 @@ public abstract class ShieldSpriteAttribute extends DirectionsJsonObject impleme
    * This builder can be used to set the values describing the {@link ShieldSpriteAttribute}.
    */
   @AutoValue.Builder
-  public abstract static class Builder {
+  public abstract static class Builder extends DirectionsJsonObject.Builder<Builder> {
 
     /**
      * Shield sprite's width.
@@ -187,6 +187,5 @@ public abstract class ShieldSpriteAttribute extends DirectionsJsonObject impleme
     @NonNull
     public abstract ShieldSpriteAttribute build();
 
-    abstract Builder unrecognised(Map<String, Object> value);
   }
 }

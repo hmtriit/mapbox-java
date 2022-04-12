@@ -64,7 +64,7 @@ public abstract class Congestion extends DirectionsJsonObject {
    * This builder can be used to set the values describing the {@link Congestion}.
    */
   @AutoValue.Builder
-  public abstract static class Builder {
+  public abstract static class Builder extends DirectionsJsonObject.Builder<Builder> {
 
     /**
      * Quantitative descriptor of congestion. 0 to 100.
@@ -78,6 +78,5 @@ public abstract class Congestion extends DirectionsJsonObject {
      */
     public abstract Congestion build();
 
-    abstract Builder unrecognised(Map<String, Object> value);
   }
 }

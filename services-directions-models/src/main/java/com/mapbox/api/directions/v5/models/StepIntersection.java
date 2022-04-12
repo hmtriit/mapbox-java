@@ -248,7 +248,7 @@ public abstract class StepIntersection extends DirectionsJsonObject {
    * @since 3.0.0
    */
   @AutoValue.Builder
-  public abstract static class Builder {
+  public abstract static class Builder extends DirectionsJsonObject.Builder<Builder> {
 
     /**
      * An integer array of bearing values available at the step intersection.
@@ -422,6 +422,5 @@ public abstract class StepIntersection extends DirectionsJsonObject {
      */
     public abstract StepIntersection build();
 
-    abstract Builder unrecognised(Map<String, Object> value);
   }
 }

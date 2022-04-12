@@ -107,7 +107,7 @@ public abstract class ShieldSprites extends DirectionsJsonObject implements Seri
    * This builder can be used to set the values describing the {@link ShieldSprites}.
    */
   @AutoValue.Builder
-  public abstract static class Builder {
+  public abstract static class Builder extends DirectionsJsonObject.Builder<Builder> {
 
     /**
      * List of {@link ShieldSprite}.
@@ -125,6 +125,5 @@ public abstract class ShieldSprites extends DirectionsJsonObject implements Seri
     @NonNull
     public abstract ShieldSprites build();
 
-    abstract Builder unrecognised(Map<String, Object> value);
   }
 }

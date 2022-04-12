@@ -103,7 +103,7 @@ public abstract class VoiceInstructions extends DirectionsJsonObject {
    * @since 3.0.0
    */
   @AutoValue.Builder
-  public abstract static class Builder {
+  public abstract static class Builder extends DirectionsJsonObject.Builder<Builder> {
 
     /**
      * Returns the missing piece in which is needed to announce instructions at accurate
@@ -148,6 +148,5 @@ public abstract class VoiceInstructions extends DirectionsJsonObject {
      */
     public abstract VoiceInstructions build();
 
-    abstract Builder unrecognised(Map<String, Object> value);
   }
 }

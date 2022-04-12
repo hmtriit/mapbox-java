@@ -135,7 +135,7 @@ public abstract class LegAnnotation extends DirectionsJsonObject {
    * @since 3.0.0
    */
   @AutoValue.Builder
-  public abstract static class Builder {
+  public abstract static class Builder extends DirectionsJsonObject.Builder<Builder> {
 
     /**
      * The distance, in meters, between each pair of coordinates.
@@ -205,6 +205,5 @@ public abstract class LegAnnotation extends DirectionsJsonObject {
      */
     public abstract LegAnnotation build();
 
-    abstract Builder unrecognised(Map<String, Object> value);
   }
 }

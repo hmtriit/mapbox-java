@@ -64,7 +64,7 @@ public abstract class SilentWaypoint extends DirectionsJsonObject {
    * This builder can be used to set the values describing the {@link SilentWaypoint}.
    */
   @AutoValue.Builder
-  public abstract static class Builder {
+  public abstract static class Builder extends DirectionsJsonObject.Builder<Builder> {
 
     /**
      * @param waypointIndex the associated waypoint index, excluding
@@ -96,6 +96,5 @@ public abstract class SilentWaypoint extends DirectionsJsonObject {
     @NonNull
     public abstract SilentWaypoint build();
 
-    abstract Builder unrecognised(Map<String, Object> value);
   }
 }

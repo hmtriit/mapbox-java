@@ -78,7 +78,7 @@ public abstract class MapboxStreetsV8 extends DirectionsJsonObject {
    * This builder can be used to set the values describing the {@link MapboxStreetsV8}.
    */
   @AutoValue.Builder
-  public abstract static class Builder {
+  public abstract static class Builder extends DirectionsJsonObject.Builder<Builder> {
 
     /**
      * Class of the road exiting the intersection.
@@ -95,6 +95,5 @@ public abstract class MapboxStreetsV8 extends DirectionsJsonObject {
      */
     public abstract MapboxStreetsV8 build();
 
-    abstract Builder unrecognised(Map<String, Object> value);
   }
 }

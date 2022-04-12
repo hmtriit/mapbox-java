@@ -108,7 +108,7 @@ public abstract class MaxSpeed extends DirectionsJsonObject {
    * @since 3.0.0
    */
   @AutoValue.Builder
-  public abstract static class Builder {
+  public abstract static class Builder extends DirectionsJsonObject.Builder<Builder> {
 
     /**
      * Number indicating the posted speed limit.
@@ -154,6 +154,5 @@ public abstract class MaxSpeed extends DirectionsJsonObject {
      */
     public abstract MaxSpeed build();
 
-    abstract Builder unrecognised(Map<String, Object> value);
   }
 }

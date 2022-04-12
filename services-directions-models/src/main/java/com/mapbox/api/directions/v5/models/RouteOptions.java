@@ -1038,7 +1038,7 @@ public abstract class RouteOptions extends DirectionsJsonObject {
    * This builder can be used to set the values describing the {@link RouteOptions}.
    */
   @AutoValue.Builder
-  public abstract static class Builder {
+  public abstract static class Builder extends DirectionsJsonObject.Builder<Builder> {
 
     /**
      * Base URL for the request.
@@ -1915,6 +1915,5 @@ public abstract class RouteOptions extends DirectionsJsonObject {
     @NonNull
     public abstract RouteOptions build();
 
-    abstract Builder unrecognised(Map<String, Object> value);
   }
 }

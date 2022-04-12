@@ -83,7 +83,7 @@ public abstract class ShieldSvg extends DirectionsJsonObject implements Serializ
    * This builder can be used to set the values describing the {@link ShieldSvg}.
    */
   @AutoValue.Builder
-  public abstract static class Builder {
+  public abstract static class Builder extends DirectionsJsonObject.Builder<Builder> {
 
     /**
      * SVG.
@@ -101,6 +101,5 @@ public abstract class ShieldSvg extends DirectionsJsonObject implements Serializ
     @NonNull
     public abstract ShieldSvg build();
 
-    abstract Builder unrecognised(Map<String, Object> value);
   }
 }

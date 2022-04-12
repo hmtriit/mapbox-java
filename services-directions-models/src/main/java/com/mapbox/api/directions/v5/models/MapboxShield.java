@@ -100,7 +100,7 @@ public abstract class MapboxShield extends DirectionsJsonObject {
    * @since 3.0.0
    */
   @AutoValue.Builder
-  public abstract static class Builder {
+  public abstract static class Builder extends DirectionsJsonObject.Builder<Builder> {
 
     /**
      * Base url to query the styles endpoint.
@@ -142,6 +142,5 @@ public abstract class MapboxShield extends DirectionsJsonObject {
      */
     public abstract MapboxShield build();
 
-    abstract Builder unrecognised(Map<String, Object> value);
   }
 }
