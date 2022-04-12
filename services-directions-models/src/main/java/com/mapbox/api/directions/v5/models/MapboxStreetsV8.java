@@ -92,6 +92,5 @@ public abstract class MapboxStreetsV8 extends DirectionsJsonObject {
      * @return a new {@link MapboxStreetsV8} using the provided values in this builder
      */
     public abstract MapboxStreetsV8 build();
-
   }
 }
