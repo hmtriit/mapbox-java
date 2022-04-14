@@ -9,6 +9,7 @@ dependencies {
 
   // AutoValue
   compileOnly dependenciesList.autoValueGson
+    implementation dependenciesList.autoValueGsonRuntime
   annotationProcessor dependenciesList.autoValue
 
   // Test Dependencies
