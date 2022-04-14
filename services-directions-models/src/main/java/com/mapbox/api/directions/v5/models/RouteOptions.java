@@ -33,6 +33,7 @@ import java.util.List;
 public abstract class RouteOptions extends DirectionsJsonObject {
 
   private static final String UTF_8 = "UTF-8";
+  private static final String ACCESS_TOKEN_URL_PARAM_NAME = "access_token";
 
   /**
    * Build a new instance of {@link RouteOptions} and sets default values for:
@@ -872,10 +873,12 @@ public abstract class RouteOptions extends DirectionsJsonObject {
     for (String query : queryElements) {
       int idx = query.indexOf("=");
       try {
-        optionsJson.addProperty(
-          URLDecoder.decode(query.substring(0, idx), UTF_8),
-          URLDecoder.decode(query.substring(idx + 1), UTF_8)
-        );
+        String name = URLDecoder.decode(query.substring(0, idx), UTF_8);
+        if (name.equals(ACCESS_TOKEN_URL_PARAM_NAME)) {
+          continue;
+        }
+        String value = URLDecoder.decode(query.substring(idx + 1), UTF_8);
+        optionsJson.addProperty(name, value);
       } catch (UnsupportedEncodingException ex) {
         throw new RuntimeException(ex);
       }
@@ -904,7 +907,7 @@ public abstract class RouteOptions extends DirectionsJsonObject {
       .append(String.format("/%s", user()))
       .append(String.format("/%s", profile()))
       .append(String.format("/%s", coordinates()))
-      .append(String.format("?access_token=%s", accessToken))
+      .append(String.format("?%s=%s", ACCESS_TOKEN_URL_PARAM_NAME, accessToken))
       .append(String.format("&geometries=%s", geometries()));
 
     if (alternatives() != null) {
